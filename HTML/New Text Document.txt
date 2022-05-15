@@ -1,0 +1,20 @@
+<HTML>
+<HEAD>
+<style>
+h1{
+color:blue;
+text-align:center;
+fontsize:40;
+}
+p{
+color:red;
+text-align:right;
+fontsize:20;
+}
+</style>
+</HEAD>
+<BODY bgcolor=green>
+<h1>Introduction to HTML & CSS</h1>
+<p>This is demo page for HTML</p>
+</BODY>
+</HTML>
