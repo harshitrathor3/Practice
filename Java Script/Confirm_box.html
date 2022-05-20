@@ -1,0 +1,29 @@
+<html>
+    <body>
+        <p>
+            Press a button.
+        </p>
+        <button onclick="myfun2()">Click here</button>
+        <p id="demo"></p>
+
+        <script>
+
+            function myfun2(){
+                var txt;
+
+                if (confirm("Press a button")){
+                    txt = "You Pressed OK";
+                }
+                else{
+                    txt = "You Pressed Cancel";
+                }
+
+                document.getElementById("demo").innerHTML = txt;
+
+            }
+
+        </script>
+
+
+    </body>
+</html>

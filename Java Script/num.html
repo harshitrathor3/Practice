@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <form>
+            Mobile Number <input type="text" id="id1"><br>
+            <input type="button" value="submit" onclick="return myMob();">
+            
+        </form>
+
+        <script>
+            function myMob (){
+                var a = document.getElementById("id1").value;
+                var mob = /^[1-9]{1}[0-9]{9}$/;
+                if (mob.test(a)==false){
+                    alert("Wrong Inpt");
+                    return false;
+                }
+                else{
+                    alert("Success");
+                    return true;
+                }
+            }
+        </script>
+
+
+    </body>
+</html>

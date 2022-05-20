@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <form>
+            Gender : <input type="radio" name="gender" value="Male" id="id1" >Male
+            <input type="radio" name="gender" value="Female" id="id2" >Female
+            <input type="button" value="submit" onclick="return myFun();">
+            
+        </form>
+
+        <script>
+            function myFun(){
+                if( (id1.checked==false) && (id2.checked==false)){
+                    alert("plz select gender");
+                    return false;
+                }
+                alert("Very Good");
+                return true;
+            }
+        </script>
+
+    </body>
+</html>

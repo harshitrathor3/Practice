@@ -1,0 +1,48 @@
+<html>
+    <body>
+        <form>
+            Password : <input type="text" id="id1">
+            Confirm Password : <input type="text" id="id2">
+            <input type="button" value="submit" onclick="return myFun();">
+        </form>
+
+        <script>
+            function myFun(){
+                var a = document.getElementById("id1").value;
+                var b = document.getElementById("id2").value;
+                var err="";
+                var illegalChar = /[\W]/;
+
+                if (a==""){
+                    err = "please enter password";
+                    alert(err);
+                    return false;
+                }
+                else if((a.length<7)||(a.length>15)){
+                    err = "password length should be in 7 to 15 char";
+                    alert(err);
+                    return false;
+                }
+                else if ((a.search(/[a-z]+/)==-1)|| (a.search(/[A-Z]+/)==-1) || (a.search(/[0-9]+/)==-1) ){
+                    err = "One lower and one upper is must and 1 digit too";
+                    alert(err);
+                    return false;
+        
+                }
+
+                else if(illegalChar.test(a)){
+                    err = "Illegal Characters";
+                    alert(err);
+                    return false;
+                }
+                else if (a!=b){
+                    alert("Passsword not same");
+                }
+                else{
+                    alert("Sucesss");
+                    
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <form>
+            <select id="id1">
+                <option name="type" value="selected">Select type</option>
+                <option name="fr" value="fresher">Fresher</option>
+                <option name="ex" value="experienced">Experienced</option>
+                <option name="un" value="studying">Under Studying</option>
+
+            </select>
+            <input type="button" value="submit" onclick="return myFun();">
+
+        </form>
+
+        <script>
+            function myFun(){
+                if (id1.selectedIndex == 0){
+                    alert("please select your member type");
+                    return false;
+                }
+                alert("VG");
+                return true;
+            }
+        </script>
+    </body>
+</html>

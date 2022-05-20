@@ -1,0 +1,36 @@
+<html>
+    <body>
+        First Name :<span id="err"></span><input type="text" id="id2"><br>
+        <input type="submit" onclick="return myFun();">
+
+        <script>
+            var a;
+            function myFun(){
+                a = document.getElementById("id2").value;
+                var b = /^[A-Za-z]+$/;
+
+                if (a==""){
+                    document.getElementById("err").innerHTML="<span style = 'color:red'>*Name is null</span>";
+                    return false;
+                }
+
+                if (a.length<3){
+                    document.getElementById("err").innerHTML="<span style = 'color:red'>*Name is short</span>";
+                }
+
+                if (a.length>20){
+                    document.getElementById("err").innerHTML="<span style = 'color:red'>*Name is long</span>";
+                }
+
+                if (a.match(b)){
+                    return true;
+                }
+                else{
+                    document.getElementById("err").innerHTML="<span style = 'color:red'>*only characters allowed</span>";
+                }
+            }
+        </script>
+
+
+    </body>
+</html>
